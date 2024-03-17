@@ -26,6 +26,38 @@ $(document).ready(function () {
             $(`#${result}`).css('color', "white");
         }
 
+        const displayZodiacs = (my_zodiac, their_zodiac) => {
+            // Reset size to 0 to simulate a close effect
+            $('#me #horoscope').animate({
+                'max-height': '0px'
+            }, {
+                duration: 500,
+                complete: function () {
+                    // On complete edit the text to the new one
+                    $(`#me #horoscope`).text(my_zodiac);
+                }
+            }).delay(500).animate({
+                // Show the container
+                'max-height': "25px"
+            }, {
+                duration: 500,
+            })
+
+            // Do the same on the other element
+            $('#them #horoscope').animate({
+                'max-height': '0px'
+            }, {
+                duration: 500,
+                complete: function () {
+                    $(`#them #horoscope`).text(their_zodiac);
+                }
+            }).delay(500).animate({
+                'max-height': "25px"
+            }, {
+                duration: 500,
+            })
+        }
+
         $.ajax({
             url: 'flames.php',
             method: 'POST',
@@ -42,6 +74,9 @@ $(document).ready(function () {
 
                 // Change FLAMES text to the result
                 displayResult(res['result']);
+
+                // Show and Change zodiac under the names
+                displayZodiacs(res['my_zodiac'], res['their_zodiac']);
             },
             error: function (xhr, status, error) {
                 // On error, handle the error

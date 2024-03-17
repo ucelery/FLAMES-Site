@@ -62,11 +62,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col" id="me">
                                 <input type="text" class="form-control" id="my_name" name="myName" placeholder="Your Name">
+                                <div id="horoscope">Aries</div>
                             </div>
-                            <div class="col">
+                            <div class="col" id="them">
                                 <input type="text" class="form-control" id="their_name" name="theirName" placeholder="Their Name">
+                                <div id="horoscope">Leo</div>
                             </div>
                         </div>
                         <div class="row">

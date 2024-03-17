@@ -109,3 +109,10 @@ input {
 .submit-container button {
     width: 100%;
 }
+
+#horoscope {
+    text-align: center;
+    max-height: 0px;
+
+    overflow: hidden;
+}
