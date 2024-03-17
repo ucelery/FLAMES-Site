@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    color: white;
+    font-family: 'Lexend';
+}
+
+input {
+    color: inherit;
+}
+
+.wrapper { 
+    min-width: 100vh;
+    min-height: 100vh;
+
+    position: relative;
+
+    box-shadow: inset rgba(0, 0, 0, 1) 0px 0px 200px 0px, rgba(0, 0, 0, 1) 0px 30px 100px -24px;
+}
+
+.form-wrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.form-wrapper .content {
+    position: relative;
+}
+
+.form-wrapper .form-blur-bg {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    z-index: 100;
+    
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-wrapper .content .form-content {
+    z-index: 10;
+}
+
+.form-wrapper .form-content form > * {
+    margin-bottom: 50px;
+}
+
+.flames-text {
+    display: flex;
+    font-size: 3.5rem;
+}
+
+.letter {
+    display: flex;
+    transition: 1s;
+}
+
+.letter .meaning {
+    max-width: 0px;
+    display: inline-block;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.flames-text-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-content form {
+    float: right;   
+}
+
+.form-wrapper .form-content .row {
+    margin-bottom: 15px;
+}
+
+.video-foreground video {
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.vid-filter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.submit-container {
+    width: 100%;
+}
+
+.submit-container button {
+    width: 100%;
+}
